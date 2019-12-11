@@ -1,0 +1,664 @@
+ /*-------------------------------------
+            1. welcome
+----------------------------------------*/
+#welcome
+{    
+    @include gradient(90deg, #00e4ce 31%, #00abc9 69%);    
+    width: 100%;
+    height: 100%;
+    position: absolute!important;
+    .destination
+    {
+        font:24px/86px Pacifico;
+        color:#000;
+        text-align:center;
+        position: relative;
+        z-index: 99;
+         @media #{$mobile} 
+        {
+           font:18px/36px Pacifico; 
+        }
+    }
+    .hi
+    {
+        font:60px/86px Pacifico;
+        color:$whiteColor;
+        text-align:center;
+        position: relative;
+        z-index: 99;
+        @media #{$mobile} 
+        {
+           font:24px/46px Pacifico; 
+        }
+        span
+        { 
+            font-family: inherit;
+            color:$yellowColor;
+        }
+    }
+    canvas
+    {
+        @include gradient(320deg, rgba(0, 188, 212, .70),rgba(100, 48, 148, .70));
+        position: absolute!important;
+        top:0;
+        left:0;  
+    }
+}
+ /*-------------------------------------
+            2. About Me
+----------------------------------------*/
+#aboutMe
+{    
+    background: url(../images/skill-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    &::before   
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; 
+        @include gradient(320deg, rgba(0, 188, 212, .50),rgba(100, 48, 148, .50));/*90deg,#27e2de 0,#2974ef*/ 
+    }
+    img{position: relative;
+     &::before   
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; 
+        @include gradient(320deg, rgba(0, 188, 212, .70),rgba(100, 48, 148, .70));/*90deg,#27e2de 0,#2974ef*/ 
+    }
+    }
+    .sectionHeading
+    {
+        color:$whiteColor; 
+          @include gradient_text(#86b6ff,#ffffff);
+    }
+    .fa
+    {
+        color:#e4ff00
+    }
+    .description
+    {
+        color:#12426e;
+    }
+    .special
+    {
+        text-transform: uppercase;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        margin: 20px 0 0 0;
+        color:#144673;
+         @media #{$tablet} 
+        {
+            text-align: center;
+           font-size: 15px;
+            padding: 0 30px;
+            position: relative;
+            margin-bottom:30px;
+             .fa
+            {
+                left:15px;top:5px;position: absolute
+            }
+        }
+    }
+    .aboutDots
+    {
+        padding-bottom: 20px;
+        &::after, &::before 
+        {
+            content: "";
+            position: absolute;
+            width: 165px;
+            height: 105px;
+            background-image: url(../images/dots.svg);
+            opacity: 0.6;
+        }
+        &::before
+        {
+            top: -50px;
+            right: -70px;
+            z-index: -1;
+            @media #{$desktop} 
+            {
+                top:-20px;
+                right: 0px;
+            }
+        }
+        &::after
+        {
+            bottom: -50px;
+            left:-70px;
+            z-index: -1;
+            @media #{$desktop} 
+            {
+                bottom: 0px;
+                left: 0px;
+            }
+        }
+        .personTitle 
+        {
+            color: #144673;
+            font: 40px/86px Pacifico;
+            font-weight: 100;
+            letter-spacing: 3px;
+            margin-bottom: 0; 
+            position: relative;
+            top:10px;
+            @media #{$desktop} 
+            {
+                 font: 30px/42px Pacifico; 
+            }
+            @media #{$tablet} 
+            {
+                 font: 24px/36px Pacifico; 
+            }
+            @media #{$mobile} 
+            {
+                 font: 20px/32px Pacifico; 
+            }
+        }
+    }
+}
+ /*-------------------------------------
+            3. My skills
+----------------------------------------*/
+#skills
+{
+     background: url(../../images/pricing-banner-bg.png); background-size: cover;
+    &::before   
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; 
+        @include gradient(320deg, rgba(0, 188, 212, .60),rgba(100, 48, 148, .60));/*90deg,#27e2de 0,#2974ef*/ 
+    }
+    .sectionHeading
+    {
+        color:$whiteColor; 
+          @include gradient_text(#86b6ff,#ffffff);
+    }
+    .description
+    {
+         color:#f7f7f7;margin:20px 0
+    }
+    .skillsList 
+    {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        div 
+        {
+            list-style:none;
+            font-weight:normal;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            margin-bottom:5px;
+            width: 100%; color:#f7f7f7;
+            strong
+            {
+                font-weight:normal;
+                &::after {
+                    content: '';
+                    width: 10px;
+                    height: 1px;
+                    display: inline-block;
+                    margin: 0 5px;
+                    vertical-align: middle;
+                    background-color: #e4ff00;
+                }
+            }
+        }
+    }
+    #myCanvasContainer{position:relative;height:100%;width:100%;text-align:center;}
+    #myCanvasContainer canvas {touch-action: none;}
+    #myCanvas
+    {
+        a{   font-family: 'Open Sans Condensed', sans-serif;}
+    }
+}
+ /*-------------------------------------
+            4. Experience
+----------------------------------------*/
+#experience
+{ 
+    background-image: url(../images/parallax-feature.jpg);
+    background-size: cover ;
+    &::before   
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; 
+        @include gradient(320deg, rgba(0, 188, 212, .70),rgba(100, 48, 148, .70));/*90deg,#27e2de 0,#2974ef*/ 
+    }
+     @media #{$desktopMin} 
+    {
+        .col-lg-5
+    {
+        -ms-flex: 0 0 46%;
+        flex: 0 0 46%;
+        max-width: 46%;
+    }
+    .offset-lg-1{margin-left: 8%;}
+    }
+    
+     .sectionHeading
+    {
+        color:$whiteColor; 
+         @include gradient_text(#86b6ff,#ffffff);
+        margin-bottom: 40px;
+    }
+    .fa-briefcase{background-color: #ffff;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 100%;
+    position: relative;
+    top: 24px;
+    left: -13px; color: #102c58;
+         @media #{$tablet} 
+                    {
+                        top:0
+                    }
+    
+    }
+    .experienceContent
+    {
+        padding-top:40px;
+        .mainTimeline
+        {
+            position: relative;
+            &::before
+            {
+                content: "";
+                width: 2px;
+                height: 90%;
+                background: #ffffff;
+                position: absolute;
+                top: 1%;
+                left: 50%;
+                z-index: 1;
+                @media #{$tablet} 
+                {
+                    left: 0.6%;
+                    height:88%
+                }
+            }
+            .singleTimelineBox
+            {
+                margin-bottom: 50px;
+               .experienceTime
+                {
+                    position: relative;
+                     h2 {
+                        font-weight: 400;font-size: 18px; color:#102c58
+                    }
+                    h3 {
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: #162d52;
+                        margin-top: 14px;
+                        text-transform: uppercase;
+                    }
+                     span>i {
+                        color: #0044af;
+                        position: absolute;
+                        font-size: 10px;
+                        left: -13%;
+                        z-index: 1;
+                        @media #{$desktop} 
+                        {
+                            left: -13.9%; 
+                        }
+                        @media #{$tablet} 
+                        {
+                            display: none
+                        }
+                    }
+                     @media #{$tablet} 
+                    {
+                       text-align: left!important;margin-bottom: 20px;margin-left: 40px;
+                    }
+                }
+                .timeline
+                {
+                    position: relative;
+                    .timelineContent
+                    {
+                        h4.title {
+                            font-size: 16px;
+                            font-weight: 400;
+                            color:#102c58;
+                            text-transform: uppercase;
+                        }
+                        h5 {
+                            color: #162d52;
+                            font-size: 14px;
+                            font-weight: 300;
+                            margin: 0px 0 5px;
+                        }
+                        .description 
+                        {
+                            font-size: 14px;
+                            color: #1f1f1f;
+                        }
+                        span>i 
+                        {
+                            color: #0044af;
+                            position: absolute;
+                            font-size: 10px;
+                            left: -13%;
+                            z-index: 1;
+                             @media #{$desktop} 
+                                {
+                                    left: -13.9%; 
+                                }
+                            
+                             @media #{$tablet} 
+                            {
+                                left: 0%;top:-70px
+                            }
+                        }
+                        &.right{
+                            float: right;
+                            text-align: left;
+                        }
+                         @media #{$tablet} 
+                            {
+                                .justify-content-end {
+                                 @include flex-direction(row-reverse);
+                                    
+                            }
+                        }
+                         @media #{$tablet} 
+                    {
+                       text-align: left!important;margin-bottom: 20px;margin-left: 40px;
+                    }
+                    }
+                }
+                .experienceTimeResponsive
+                {
+                    display: none;
+                    @media #{$tablet} 
+                    {
+                        display: block
+                    }
+                }
+                .experienceTimeMain
+                {
+                    @media #{$tablet} 
+                    {
+                        display: none
+                    }
+                }
+            }
+        }
+    }
+}
+
+ /*-------------------------------------
+            5. websitePlatforms
+----------------------------------------*/
+
+#websitePlatforms {
+    background: #7e8990;
+    text-align: center;    
+    background-image: url(../images/waves-min.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-animation:bg-animation 25s ease-in-out infinite;
+    animation:bg-animation 25s ease-in-out infinite;
+    &::before   
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; 
+        @include gradient(320deg, rgba(0, 188, 212, .70),rgba(100, 48, 148, .70));/*90deg,#27e2de 0,#2974ef*/ 
+    }
+    @-webkit-keyframes bg-animation{
+        0%{background-position:top}
+        50%{background-position:bottom}
+        100%{background-position:top}}
+    @keyframes bg-animation{
+        0%{background-position:top}
+        50%{background-position:bottom}
+        100%{background-position:top}}
+    
+    .sectionHeading
+    {
+        color:$whiteColor; 
+        @include gradient_text(#86b6ff,#ffffff);
+        margin-bottom: 40px;
+    }
+    
+    
+    
+@media (min-width: 768px) 
+{
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(50%);
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-50%);
+    }
+}
+
+/* large - display 3 */
+@media (min-width: 992px) 
+{
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(33%);
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-33%);
+    }
+}
+
+@media (max-width: 768px) 
+{
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+    transform: translateX(0);
+} 
+}
+ 
+ 
+
+/*--------------------------------------
+            5. websitePlatforms
+----------------------------------------*/
+#WhatIDo
+{    
+   background: url(../images/bgslider1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    &::before   
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; 
+        @include gradient(320deg, rgba(0, 188, 212, .70),rgba(100, 48, 148, .70));/*90deg,#27e2de 0,#2974ef*/ 
+    }
+    .sectionHeading
+    {
+        color:$whiteColor; 
+         @include gradient_text(#86b6ff,#ffffff);
+        margin-bottom: 40px;
+    }
+    .serviceBox
+    {
+        padding: 20px 0;
+        background-color: rgba(255,255,255,0.3);
+        @include radius(4px);
+        margin-bottom: 20px;
+        h4
+        {
+            font-family: 'Oswald', sans-serif;
+            margin:10px 0
+        }
+        p{color:rgba($blackColor,0.7);letter-spacing: 0.05rem;}
+    }
+}
+
+
+#contactMe
+{
+    background: url(../images/blue-sea-travel-wallpapers-hd.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    &::before   
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; 
+        @include gradient(320deg, rgba(0, 188, 212, .70),rgba(100, 48, 148, .70));/*90deg,#27e2de 0,#2974ef*/ 
+    } 
+    .sectionHeading
+    {
+        color:$whiteColor; 
+         @include gradient_text(#86b6ff,#ffffff);
+        margin-bottom: 40px;
+    }
+    .addressItem
+    {
+         padding: 20px;
+        background-color: rgba(255,255,255,0.3);
+        @include radius(12px);
+        margin-bottom: 20px;
+        text-align: center;
+        min-height: 160px;  @include flex-direction();
+        .eachIcon
+        {
+            font-size: 36px;
+            color: #102c58;
+            margin-bottom: 20px;
+            background-color: rgba(232, 232, 232, 0.37);
+            width: 60px;
+            height: 60px;
+            @include radius(32px);
+        }
+        .eachInfo p, .eachInfo a{
+            color: rgba(0, 0, 0, 0.7);
+            letter-spacing: 0.05rem;
+            text-decoration: none;
+            font-size: 16px
+        }
+    }
+}
+
+#hireMe
+{
+    background-image: url(../images/call-to-action.jpg);
+    background-position: center center;
+    background-size: cover; 
+    &::before
+    {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(117, 78, 249, 0.7);
+        z-index: -1;
+    } 
+    .sectionHeading
+    {
+        color:$whiteColor; 
+         @include gradient_text(#86b6ff,#ffffff);
+        margin-bottom: 40px;
+    }
+    p {
+    color: #fff;
+    padding-bottom: 25px;
+    max-width: 600px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px; 
+    margin: 0px auto;
+}
+    .btn{
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #ffffff;
+    padding: 0 40px;
+    font-size: 15px;
+    line-height: 48px;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 5;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(118, 78, 249, 0.55);
+    -moz-box-shadow: 0px 5px 8px 0px rgba(118, 78, 249, 0.55);
+    box-shadow: 0px 5px 8px 0px rgba(118, 78, 249, 0.55); 
+    text-transform: uppercase;
+}
+ 
+}
+ 
+
+

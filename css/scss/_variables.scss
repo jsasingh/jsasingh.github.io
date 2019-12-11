@@ -1,17 +1,41 @@
-/*=================== fonts ====================*/
-@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Roboto:300,400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=Pacifico&amp;subset=cyrillic,latin-ext,vietnamese');
+$Avenir: "Avenir";;
+$AvenirRoman: "Avenir Roman";;
 
-/*font Variables*/
-$rob: 'Roboto', sans-serif;
-$hee: 'Heebo', sans-serif;
-$rale:'Raleway';
-$paci:'Pacifico';
-/*Color Variables*/
-$baseColor: #5b6bfd; 
-$dip: #222222;
-$pfont: #777777; 
-$whiteColor:#ffffff;
+
+$whiteColor:#ffffff; 
 $blackColor:#000000;
-$yellowColor:#ffbe00;
+
+
+
+/* Theme Color */    
+$primaryColor:#05637e; 
+$primaryHoverColor:#077fa2; 
+$secondaryColor:#000000;
+$whiteColor:#ffffff;
+$blueColor:#04091e;/*rgb(4,9,30)*/
+$blackColor:#000000;
+
+$yellowColor:#e3ba00;
+
+
+$mobile:"only screen and (max-width: 767px)";
+$tablet:"only screen and (max-width: 991px)";
+$desktopMin:"only screen and (min-width: 992px)";
+$desktop:"only screen and (max-width:1199px)";
+ 
+  
+$borderColor:#80cfe3;
+$lightGrey:#cbcbcb;
+
+$myplay-light-grey:#bfcfd3;
+
+$facebookColor:#3B5998;
+$twitterColor:#49a7f3;
+$pinterestColor:#c8232c;
+$googleplusColor:#f03b3b;
+
+$textColor:$blackColor;
+$linkColor:$primaryColor;
+$linkHoverColor:$primaryHoverColor;
+$iconColor:$primaryColor;
+ 
