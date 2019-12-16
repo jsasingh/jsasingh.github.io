@@ -15,17 +15,17 @@
 /*********** justify-content ************/
 /******** Button *********/
 /*inheritance Font */
-/*--------------------------------------
+/* --------------------------------------
             1. Welcome
-----------------------------------------*/
+---------------------------------------- */
 .view {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-perspective: 400;
-  perspective: 400;
+  -webkit-perspective: 400px;
+  perspective: 400px;
   z-index: 99; }
 
 .plane.main {
@@ -115,9 +115,9 @@
   100% {
     -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); } }
-/*--------------------------------------
+/* --------------------------------------
             2. About Me
-----------------------------------------*/
+---------------------------------------- */
 .fullFill, .imgOverLine, .imgOverLine::before, .imgOverLine::after {
   position: absolute;
   top: 0;
@@ -139,8 +139,8 @@
       height: 250px; } }
   @media only screen and (max-width: 767px) {
     .imgOverLine {
-      width: 180px;
-      height: 180px; } }
+      width: 120px;
+      height: 120px; } }
   .imgOverLine img {
     width: 300px;
     height: 300px; }
@@ -150,8 +150,8 @@
         height: 250px; } }
     @media only screen and (max-width: 767px) {
       .imgOverLine img {
-        width: 180px;
-        height: 180px; } }
+        width: 120px;
+        height: 120px; } }
   .imgOverLine::before, .imgOverLine::after {
     content: '';
     z-index: -1;
@@ -173,23 +173,23 @@
 @media only screen and (max-width: 991px) {
   @keyframes clipMe {
     0%, 100% {
-      clip: rect(0px, 280px, 1px, 0px); }
+      clip: rect(0px, 250px, 1px, 0px); }
     25% {
-      clip: rect(0px, 1px, 280px, 0px); }
+      clip: rect(0px, 1px, 250px, 0px); }
     50% {
-      clip: rect(279px, 280px, 280px, 0px); }
+      clip: rect(249px, 250px, 250px, 0px); }
     75% {
-      clip: rect(0px, 280px, 280px, 279px); } } }
+      clip: rect(0px, 250px, 250px, 249px); } } }
 @media only screen and (max-width: 767px) {
   @keyframes clipMe {
     0%, 100% {
-      clip: rect(0px, 210px, 1px, 0px); }
+      clip: rect(0px, 180px, 1px, 0px); }
     25% {
-      clip: rect(0px, 1px, 210px, 0px); }
+      clip: rect(0px, 1px, 180px, 0px); }
     50% {
-      clip: rect(209px, 210px, 210px, 0px); }
+      clip: rect(179px, 180px, 180px, 0px); }
     75% {
-      clip: rect(0px, 210px, 210px, 209px); } } }
+      clip: rect(0px, 180px, 180px, 179px); } } }
 /*Load Font */
 @font-face {
   font-family: "Avenir";
@@ -212,7 +212,7 @@
 /*common styles */
 .content {
   max-height: 500px;
-  margin: 40px 0;
+  margin: 20px 0;
   overflow: auto; }
 
 .sectionHeading {
@@ -322,54 +322,55 @@
   margin-top: -40px; }
 
 .mCustomScrollBox {
-  -ms-touch-action: none;
-  /*MSPointer events - direct all pointer events to js*/ }
+  -ms-touch-action: none; }
   @media only screen and (max-width: 767px) {
     .mCustomScrollBox {
-      max-height: 350px !important;
+      max-height: 320px !important;
       margin-right: 15px; } }
+
+@media only screen and (max-width: 767px) {
+  #aboutMe .mCustomScrollBox {
+    max-height: 120px !important;
+    margin-right: 15px; } }
+
+@media only screen and (max-width: 767px) {
+  #experience .mCustomScrollBox {
+    max-height: 320px !important; } }
 
 /* default scrollbar colors and backgrounds (default theme) */
 .mCustomScrollBox > .mCSB_scrollTools {
   opacity: 0.75;
-  filter: "alpha(opacity=75)";
-  -ms-filter: "alpha(opacity=75)";
-  /* old ie */ }
+  filter: alpha(opacity=75);
+  -ms-filter: alpha(opacity=75); }
 
 .mCustomScrollBox:hover > .mCSB_scrollTools {
   opacity: 1;
-  filter: "alpha(opacity=100)";
-  -ms-filter: "alpha(opacity=100)";
-  /* old ie */ }
+  filter: alpha(opacity=100);
+  -ms-filter: alpha(opacity=100); }
 
 .mCSB_scrollTools .mCSB_draggerRail {
   background: #000;
-  /* rgba fallback */
   background: rgba(0, 0, 0, 0.4);
-  filter: "alpha(opacity=40)";
-  -ms-filter: "alpha(opacity=40)";
-  /* old ie */ }
+  filter: alpha(opacity=40);
+  -ms-filter: alpha(opacity=40); }
 
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background: #fff;
   /* rgba fallback */
   background: rgba(255, 255, 255, 0.75);
-  filter: "alpha(opacity=75)";
-  -ms-filter: "alpha(opacity=75)";
-  /* old ie */ }
+  filter: alpha(opacity=75);
+  -ms-filter: alpha(opacity=75); }
 
 .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
   background: rgba(255, 255, 255, 0.85);
-  filter: "alpha(opacity=85)";
-  -ms-filter: "alpha(opacity=85)";
-  /* old ie */ }
+  filter: alpha(opacity=85);
+  -ms-filter: alpha(opacity=85); }
 
 .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
 .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
   background: rgba(255, 255, 255, 0.9);
-  filter: "alpha(opacity=90)";
-  -ms-filter: "alpha(opacity=90)";
-  /* old ie */ }
+  filter: alpha(opacity=90);
+  -ms-filter: alpha(opacity=90); }
 
 .mCSB_scrollTools .mCSB_buttonUp,
 .mCSB_scrollTools .mCSB_buttonDown,
@@ -378,51 +379,36 @@
   background-image: url(../images/mCSB_buttons.png);
   background-repeat: no-repeat;
   opacity: 0.4;
-  filter: "alpha(opacity=40)";
-  -ms-filter: "alpha(opacity=40)";
-  /* old ie */ }
+  filter: alpha(opacity=40);
+  -ms-filter: alpha(opacity=40); }
 
 .mCSB_scrollTools .mCSB_buttonUp {
-  background-position: 0 0;
-  /* 
-  sprites locations are 0 0/-16px 0/-32px 0/-48px 0 (light) and -80px 0/-96px 0/-112px 0/-128px 0 (dark) 
-  */ }
+  background-position: 0 0; }
 
 .mCSB_scrollTools .mCSB_buttonDown {
-  background-position: 0 -20px;
-  /* 
-  sprites locations are 0 -20px/-16px -20px/-32px -20px/-48px -20px (light) and -80px -20px/-96px -20px/-112px -20px/-128px -20px (dark) 
-  */ }
+  background-position: 0 -20px; }
 
 .mCSB_scrollTools .mCSB_buttonLeft {
-  background-position: 0 -40px;
-  /* 
-  sprites locations are 0 -40px/-20px -40px/-40px -40px/-60px -40px (light) and -80px -40px/-100px -40px/-120px -40px/-140px -40px (dark) 
-  */ }
+  background-position: 0 -40px; }
 
 .mCSB_scrollTools .mCSB_buttonRight {
-  background-position: 0 -56px;
-  /* 
-  sprites locations are 0 -56px/-20px -56px/-40px -56px/-60px -56px (light) and -80px -56px/-100px -56px/-120px -56px/-140px -56px (dark) 
-  */ }
+  background-position: 0 -56px; }
 
 .mCSB_scrollTools .mCSB_buttonUp:hover,
 .mCSB_scrollTools .mCSB_buttonDown:hover,
 .mCSB_scrollTools .mCSB_buttonLeft:hover,
 .mCSB_scrollTools .mCSB_buttonRight:hover {
   opacity: 0.75;
-  filter: "alpha(opacity=75)";
-  -ms-filter: "alpha(opacity=75)";
-  /* old ie */ }
+  filter: alpha(opacity=75);
+  -ms-filter: alpha(opacity=75); }
 
 .mCSB_scrollTools .mCSB_buttonUp:active,
 .mCSB_scrollTools .mCSB_buttonDown:active,
 .mCSB_scrollTools .mCSB_buttonLeft:active,
 .mCSB_scrollTools .mCSB_buttonRight:active {
   opacity: 0.9;
-  filter: "alpha(opacity=90)";
-  -ms-filter: "alpha(opacity=90)";
-  /* old ie */ }
+  filter: alpha(opacity=90);
+  -ms-filter: alpha(opacity=90); }
 
 /*header styles */
 * {
@@ -486,9 +472,9 @@ body {
   background-color: #ececec;
   color: #102c58; }
 
-/*******************************************
+/*  ******************************************
 ****************** Pre Loader **************
-*******************************************/
+******************************************  */
 .preLoader {
   position: fixed;
   left: 0px;
@@ -498,9 +484,9 @@ body {
   z-index: 9999;
   background: url(../images/Preloader_2.gif) center no-repeat #fff; }
 
-/*******************************************
+/*  ******************************************
 ************Page Scroll Arrow Down *********
-*******************************************/
+******************************************  */
 .pageScrollArrowdown {
   text-align: center;
   position: fixed;
@@ -599,11 +585,11 @@ body {
     filter: alpha(opacity=0);
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; } }
-/*******************************************
+/*  ******************************************
 ************Page Scroll Arrow Down *********
-*******************************************/
+******************************************  */
 /*menu styles */
-/************** page menu **************/
+/* ************* page menu ************* */
 #menu {
   position: fixed;
   display: flex;
@@ -682,7 +668,7 @@ body {
       -ms-transition: all 0.5s ease 0s;
       -o-transition: all 0.5s ease 0s; }
 
-/************** / page menu **************/
+/* *************  page menu ************* */
 .pp-section {
   height: 100%;
   position: absolute;
@@ -706,145 +692,20 @@ body {
   -o-transition-timing-function: cubic-bezier(0.55, 0.085, 0, 0.99);
   transition-timing-function: cubic-bezier(0.55, 0.085, 0, 0.99); }
 
-/*
-#pp-nav {
-    position: fixed;
-    z-index: 100;
-    margin-top: -32px;
-    top: 50%;
-    opacity: 1;
-    display: none
-}
-#pp-nav.right {
-    right: 17px;
-}
-#pp-nav.left {
-    left: 17px;
-}
- 
-
-.pp-slidesNav{
-    position: absolute;
-    z-index: 4;
-    left: 50%;
-    opacity: 1;
-}
-.pp-slidesNav.bottom {
-    bottom: 17px;
-}
-.pp-slidesNav.top {
-    top: 17px;
-}
-#pp-nav ul,
-.pp-slidesNav ul {
-  margin: 0;
-  padding: 0;
-}
-#pp-nav li,
-.pp-slidesNav li {
-    display: block;
-    width: 14px;
-    height: 13px;
-    margin: 7px;
-    position:relative;
-}
-.pp-slidesNav li {
-    display: inline-block;
-}
-#pp-nav li a,
-.pp-slidesNav li a {
-    display: block;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    text-decoration: none;
-}
-#pp-nav li .active span,
-.pp-slidesNav .active span {
-    background: #333;
-}
-#pp-nav span,
-.pp-slidesNav span {
-    top: 2px;
-    left: 2px;
-    width: 8px;
-    height: 8px;
-    border: 1px solid #000;
-    background: rgba(0, 0, 0, 0);
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-}
-.pp-tooltip {
-    position: absolute;
-    top: -2px;
-    color: #fff;
-    font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
-    white-space: nowrap;
-    max-width: 220px;
-}
-.pp-tooltip.right {
-    right: 20px;
-}
-.pp-tooltip.left {
-    left: 20px;
-}
-.pp-scrollable{
-    overflow-y: scroll;
-    height: 100%;
-}*/
 /*banner styles */
-/*.homeBanner
-{
-   padding:122px 0 182px;
-    h1
-    {
-        color:$bannerHeadingColor;
-        font-size:48px!important;
-        font-weight:700!important;
-        text-transform:uppercase;
-        line-height:50px!important;
-        span
-        {
-            color:$bannerHighlightColor;
-            font-size:48px!important;
-            font-weight:700!important;
-        }
-    }
-    p
-    {
-      color:$bannerHeadingColor!important;
-      font-size:16px!important;
-      margin:40px 0!important;
-      line-height:21px!important;
-      font-weight: 300
-    }
-    button
-    {
-        @include button($bannerBtnBgColor,$bannerBtnTextColor,18px,10px 25px);
-        @include radius(0);
-        text-transform: uppercase;
-        border:$whiteColor solid 1px;
-        @include transition(all, 0.5s, ease, 0s); 
-    }
-}
-  */
 /*Custom styles */
 /*Custom styles */
- /*-------------------------------------
-            1. welcome
-----------------------------------------*/
+/* ****************************
+           1. welcome
+****************************** */
 #welcome {
-  background: #00abc9 69% !important;
-  background: -moz-linear-gradient(90deg, #00e4ce 31% 0%, #00abc9 69% 100%) !important;
-  background: -webkit-gradient(linear, 90deg, color-stop(0%, #00e4ce 31%), color-stop(100%, #00abc9 69%)) !important;
-  background: -webkit-linear-gradient(90deg, #00e4ce 31% 0%, #00abc9 69% 100%) !important;
-  background: -o-linear-gradient(90deg, #00e4ce 31% 0%, #00abc9 69% 100%) !important;
-  background: linear-gradient(90deg, #00e4ce 31% 0%, #00abc9 69% 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#00e4ce 31%, endColorstr=#00abc9 69%) !important;
+  background-color: #00abc9;
+  background-image: -moz-linear-gradient(90deg, #00e4ce 0%, #00abc9 100%);
+  background-image: -webkit-gradient(linear, 90deg, color-stop(0%, #00e4ce), color-stop(100%, #00abc9));
+  background-image: -webkit-linear-gradient(90deg, #00e4ce 0%, #00abc9 100%);
+  background-image: -o-linear-gradient(90deg, #00e4ce 0%, #00abc9 100%);
+  background-image: linear-gradient(90deg, #00e4ce 0%, #00abc9 100%);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#00e4ce, endColorstr=#00abc9)*/
   width: 100%;
   height: 100%;
   position: absolute !important; }
@@ -870,20 +731,17 @@ body {
       font-family: inherit;
       color: #e3ba00; }
   #welcome canvas {
-    background: rgba(100, 48, 148, 0.7) !important;
-    background: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.7)), color-stop(100%, rgba(100, 48, 148, 0.7))) !important;
-    background: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.7), endColorstr=rgba(100, 48, 148, 0.7)) !important;
+    background-color: rgba(100, 48, 148, 0.7);
+    background-image: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.7)), color-stop(100%, rgba(100, 48, 148, 0.7)));
+    background-image: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.7), endColorstr=rgba(100, 48, 148, 0.7))*/
     position: absolute !important;
     top: 0;
     left: 0; }
 
- /*-------------------------------------
-            2. About Me
-----------------------------------------*/
 #aboutMe {
   background: url(../images/skill-bg.jpg);
   background-position: center center;
@@ -895,14 +753,13 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(100, 48, 148, 0.5) !important;
-    background: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.5) 0%, rgba(100, 48, 148, 0.5) 100%) !important;
-    background: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.5)), color-stop(100%, rgba(100, 48, 148, 0.5))) !important;
-    background: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.5) 0%, rgba(100, 48, 148, 0.5) 100%) !important;
-    background: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.5) 0%, rgba(100, 48, 148, 0.5) 100%) !important;
-    background: linear-gradient(320deg, rgba(0, 188, 212, 0.5) 0%, rgba(100, 48, 148, 0.5) 100%) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.5), endColorstr=rgba(100, 48, 148, 0.5)) !important;
-    /*90deg,#27e2de 0,#2974ef*/ }
+    background-color: rgba(100, 48, 148, 0.5);
+    background-image: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.5) 0%, rgba(100, 48, 148, 0.5) 100%);
+    background-image: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.5)), color-stop(100%, rgba(100, 48, 148, 0.5)));
+    background-image: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.5) 0%, rgba(100, 48, 148, 0.5) 100%);
+    background-image: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.5) 0%, rgba(100, 48, 148, 0.5) 100%);
+    background-image: linear-gradient(320deg, rgba(0, 188, 212, 0.5) 0%, rgba(100, 48, 148, 0.5) 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.5), endColorstr=rgba(100, 48, 148, 0.5))*/ }
   #aboutMe img {
     position: relative; }
     #aboutMe img::before {
@@ -912,14 +769,13 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba(100, 48, 148, 0.7) !important;
-      background: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-      background: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.7)), color-stop(100%, rgba(100, 48, 148, 0.7))) !important;
-      background: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-      background: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-      background: linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.7), endColorstr=rgba(100, 48, 148, 0.7)) !important;
-      /*90deg,#27e2de 0,#2974ef*/ }
+      background-color: rgba(100, 48, 148, 0.7);
+      background-image: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+      background-image: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.7)), color-stop(100%, rgba(100, 48, 148, 0.7)));
+      background-image: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+      background-image: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+      background-image: linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+      /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.7), endColorstr=rgba(100, 48, 148, 0.7))*/ }
   #aboutMe .sectionHeading {
     color: #ffffff;
     background: -webkit-gradient(linear, left top, right top, from(#86b6ff), to(#ffffff));
@@ -993,9 +849,9 @@ body {
         #aboutMe .aboutDots .personTitle {
           font: 20px/32px Pacifico; } }
 
- /*-------------------------------------
-            3. My skills
-----------------------------------------*/
+/* **************************** 
+           3. My skills
+**************************** */
 #skills {
   background: url(../../images/pricing-banner-bg.png);
   background-size: cover; }
@@ -1006,14 +862,13 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(100, 48, 148, 0.6) !important;
-    background: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.6) 0%, rgba(100, 48, 148, 0.6) 100%) !important;
-    background: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.6)), color-stop(100%, rgba(100, 48, 148, 0.6))) !important;
-    background: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.6) 0%, rgba(100, 48, 148, 0.6) 100%) !important;
-    background: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.6) 0%, rgba(100, 48, 148, 0.6) 100%) !important;
-    background: linear-gradient(320deg, rgba(0, 188, 212, 0.6) 0%, rgba(100, 48, 148, 0.6) 100%) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.6), endColorstr=rgba(100, 48, 148, 0.6)) !important;
-    /*90deg,#27e2de 0,#2974ef*/ }
+    background-color: rgba(100, 48, 148, 0.6);
+    background-image: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.6) 0%, rgba(100, 48, 148, 0.6) 100%);
+    background-image: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.6)), color-stop(100%, rgba(100, 48, 148, 0.6)));
+    background-image: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.6) 0%, rgba(100, 48, 148, 0.6) 100%);
+    background-image: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.6) 0%, rgba(100, 48, 148, 0.6) 100%);
+    background-image: linear-gradient(320deg, rgba(0, 188, 212, 0.6) 0%, rgba(100, 48, 148, 0.6) 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.6), endColorstr=rgba(100, 48, 148, 0.6))*/ }
   #skills .sectionHeading {
     color: #ffffff;
     background: -webkit-gradient(linear, left top, right top, from(#86b6ff), to(#ffffff));
@@ -1042,7 +897,8 @@ body {
       letter-spacing: 1px;
       margin-bottom: 5px;
       width: 100%;
-      color: #f7f7f7; }
+      color: #f7f7f7;
+      font-size: 12px; }
       #skills .skillsList div strong {
         font-weight: normal; }
         #skills .skillsList div strong::after {
@@ -1063,9 +919,9 @@ body {
   #skills #myCanvas a {
     font-family: 'Open Sans Condensed', sans-serif; }
 
- /*-------------------------------------
-            4. Experience
-----------------------------------------*/
+/*  **************************** 
+           4. Experience
+****************************  */
 #experience {
   background-image: url(../images/parallax-feature.jpg);
   background-size: cover; }
@@ -1076,14 +932,13 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(100, 48, 148, 0.7) !important;
-    background: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.7)), color-stop(100%, rgba(100, 48, 148, 0.7))) !important;
-    background: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.7), endColorstr=rgba(100, 48, 148, 0.7)) !important;
-    /*90deg,#27e2de 0,#2974ef*/ }
+    background-color: rgba(100, 48, 148, 0.7);
+    background-image: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.7)), color-stop(100%, rgba(100, 48, 148, 0.7)));
+    background-image: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.7), endColorstr=rgba(100, 48, 148, 0.7))*/ }
   @media only screen and (min-width: 992px) {
     #experience .col-lg-5 {
       -ms-flex: 0 0 46%;
@@ -1127,8 +982,8 @@ body {
         z-index: 1; }
         @media only screen and (max-width: 991px) {
           #experience .experienceContent .mainTimeline::before {
-            left: 0.6%;
-            height: 88%; } }
+            left: 3px;
+            height: 89%; } }
       #experience .experienceContent .mainTimeline .singleTimelineBox {
         margin-bottom: 50px; }
         #experience .experienceContent .mainTimeline .singleTimelineBox .experienceTime {
@@ -1212,9 +1067,9 @@ body {
           #experience .experienceContent .mainTimeline .singleTimelineBox .experienceTimeMain {
             display: none; } }
 
- /*-------------------------------------
-            5. websitePlatforms
-----------------------------------------*/
+/* **************************** 
+           5. websitePlatforms
+**************************** */
 #websitePlatforms {
   background: #7e8990;
   text-align: center;
@@ -1223,8 +1078,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-animation: bg-animation 25s ease-in-out infinite;
-  animation: bg-animation 25s ease-in-out infinite;
-  /* large - display 3 */ }
+  animation: bg-animation 25s ease-in-out infinite; }
   #websitePlatforms::before {
     content: "";
     position: absolute;
@@ -1232,14 +1086,13 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(100, 48, 148, 0.7) !important;
-    background: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.7)), color-stop(100%, rgba(100, 48, 148, 0.7))) !important;
-    background: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.7), endColorstr=rgba(100, 48, 148, 0.7)) !important;
-    /*90deg,#27e2de 0,#2974ef*/ }
+    background-color: rgba(100, 48, 148, 0.7);
+    background-image: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.7)), color-stop(100%, rgba(100, 48, 148, 0.7)));
+    background-image: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.7), endColorstr=rgba(100, 48, 148, 0.7))*/ }
 @-webkit-keyframes bg-animation {
   0% {
     background-position: top; }
@@ -1290,9 +1143,9 @@ body {
   #websitePlatforms .carousel-inner .carousel-item-left {
     transform: translateX(0); }
 
-/*--------------------------------------
+/* **************************** 
             5. websitePlatforms
-----------------------------------------*/
+ **************************** */
 #WhatIDo {
   background: url(../images/bgslider1.jpg);
   background-size: cover;
@@ -1306,14 +1159,13 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(100, 48, 148, 0.7) !important;
-    background: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.7)), color-stop(100%, rgba(100, 48, 148, 0.7))) !important;
-    background: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.7), endColorstr=rgba(100, 48, 148, 0.7)) !important;
-    /*90deg,#27e2de 0,#2974ef*/ }
+    background-color: rgba(100, 48, 148, 0.7);
+    background-image: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.7)), color-stop(100%, rgba(100, 48, 148, 0.7)));
+    background-image: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.7), endColorstr=rgba(100, 48, 148, 0.7))*/ }
   #WhatIDo .sectionHeading {
     color: #ffffff;
     background: -webkit-gradient(linear, left top, right top, from(#86b6ff), to(#ffffff));
@@ -1332,12 +1184,21 @@ body {
     -o-border-radius: 4px !important;
     border-radius: 4px !important;
     margin-bottom: 20px; }
+    @media only screen and (max-width: 767px) {
+      #WhatIDo .serviceBox .fa-3x {
+        font-size: 2rem; } }
     #WhatIDo .serviceBox h4 {
       font-family: 'Oswald', sans-serif;
       margin: 10px 0; }
+      @media only screen and (max-width: 767px) {
+        #WhatIDo .serviceBox h4 {
+          font-size: 18px; } }
     #WhatIDo .serviceBox p {
       color: rgba(0, 0, 0, 0.7);
       letter-spacing: 0.05rem; }
+      @media only screen and (max-width: 767px) {
+        #WhatIDo .serviceBox p {
+          margin: 0; } }
 
 #contactMe {
   background: url(../images/blue-sea-travel-wallpapers-hd.jpg);
@@ -1352,14 +1213,13 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(100, 48, 148, 0.7) !important;
-    background: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.7)), color-stop(100%, rgba(100, 48, 148, 0.7))) !important;
-    background: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    background: linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.7), endColorstr=rgba(100, 48, 148, 0.7)) !important;
-    /*90deg,#27e2de 0,#2974ef*/ }
+    background-color: rgba(100, 48, 148, 0.7);
+    background-image: -moz-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: -webkit-gradient(linear, 320deg, color-stop(0%, rgba(0, 188, 212, 0.7)), color-stop(100%, rgba(100, 48, 148, 0.7)));
+    background-image: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: -o-linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    background-image: linear-gradient(320deg, rgba(0, 188, 212, 0.7) 0%, rgba(100, 48, 148, 0.7) 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=rgba(0, 188, 212, 0.7), endColorstr=rgba(100, 48, 148, 0.7))*/ }
   #contactMe .sectionHeading {
     color: #ffffff;
     background: -webkit-gradient(linear, left top, right top, from(#86b6ff), to(#ffffff));
@@ -1462,105 +1322,6 @@ body {
     text-transform: uppercase; }
 
 /*footer styles */
-/*footer
-{
-    background-color:rgba($footerBgColor,0.93);
-    padding:45px 0;
-    h5{
-        color:$footerHeadingColor;
-        font-size:21px;
-        margin-bottom: 15px 
-    }
-   p{color:$footerTextColor;font-size: 14px}
-    .contactUs
-    {
-        p
-        {
-            position: relative;
-            padding-left: 25px;
-          .fa
-            {
-                color:$footerIconColor;
-                position: absolute;
-                left: 0px;
-                top: 3px;
-            }
-        }
-    }
-    a{
-        color:$footerLinkColor;
-        &:hover{
-            color:$footerLinkHoverColor;
-            text-decoration:none
-        }
-    }
-
-    .socialLinks
-    {
-        a
-        {
-            display:inline-block;
-            width: 38px;
-            height: 38px;
-            margin:3px;
-            background-color:rgba($footerSocialIconBgColor,1);
-            color:$footerSocialIconColor;
-            line-height: 38px;
-            text-align: center;
-            @include radius(100%);
-             
-            @include transition(all, 0.5s, ease, 0s);
-            .fa
-            {
-               color:$footerSocialIconColor;
-                 
-                @include transition(all, 0.5s, ease, 0s);
-                
-            }
-             &.fb
-                {
-                    background-color:$facebookColor;
-                };
-            &.tw
-                {
-                    background-color:$twitterColor;
-                };
-            &.pt
-                {
-                    background-color:$pinterestColor;
-                };
-            &.gp
-                {
-                    background-color:$googleplusColor;
-                }
-            &:hover
-            {
-                 background-color:$footerSocialIconBgHoverColor;
-                color:$footerSocialIconHoverColor;
-                 
-                @include transition(all, 0.5s, ease, 0s);
-                .fa
-                {
-                 color:$footerSocialIconHoverColor;
-                  
-                 @include transition(all, 0.5s, ease, 0s);
-                }
-            }
-        }
-    }
-}
-.copyRight
-{
-    background-color:$copyrightBgColor;
-    p{
-        font-size:14px;
-        color:rgba($copyrightTextColor,0.9);
-        padding:15px 0
-    }
-}
- footer.entry-footer{
-    background: transparent;
- }*/
 /*themes styles */
 
 /*# sourceMappingURL=app.css.map */

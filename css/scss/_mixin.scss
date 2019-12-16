@@ -67,13 +67,13 @@
  }
 /************* gradient **************/
 @mixin gradient($direction, $from, $to) {
-    background: $to!important;
-    background: -moz-linear-gradient($direction, $from 0%, $to 100%)!important;
-    background: -webkit-gradient(linear, $direction, color-stop(0%,$from), color-stop(100%,$to))!important;
-    background: -webkit-linear-gradient($direction, $from 0%,$to 100%)!important;
-    background: -o-linear-gradient($direction, $from 0%,$to 100%)!important;
-    background: linear-gradient($direction, $from 0%,$to 100%)!important;
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})!important
+    background-color: $to;
+    background-image: -moz-linear-gradient($direction, $from 0%, $to 100%);
+    background-image: -webkit-gradient(linear, $direction, color-stop(0%,$from), color-stop(100%,$to));
+    background-image: -webkit-linear-gradient($direction, $from 0%,$to 100%);
+    background-image: -o-linear-gradient($direction, $from 0%,$to 100%);
+    background-image: linear-gradient($direction, $from 0%,$to 100%);
+   /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})*/
 }
 /************** Shadow ************/
 @mixin shadow($top, $left, $blur, $spread, $color, $inset: false) {
